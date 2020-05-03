@@ -1,7 +1,7 @@
-const Index = () => (
+const App = () => (
   <div>
     Welcome to ICollege
   </div>
 )
 
-export default Index;
+export default App;
