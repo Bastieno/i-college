@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from '../styles/globalStyles';
 import theme from '../theme';
 import AppContext from '../contexts/appContext';
 
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <AppContext.Provider value={{ toggleMode, mode }}>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </AppContext.Provider>

@@ -32,6 +32,7 @@
     "printWidth": 120
   },
   "dependencies": {
+    "@styled-system/theme-get": "^5.1.2",
     "next": "^9.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
