@@ -8,13 +8,14 @@ const sizes: any[] = [16, 32, 40, 44, 48, 64, 128, 256, 512, 768, 1024, 1536, '1
 const radii: any[] = [3, 4, 5, 10, 20, 30, 60, 120, '50%'];
 
 const theme = {
-  initialColorModeName: 'light',
+  colors,
   breakpoints,
   space,
   sizes,
   radii,
   fontSizes,
   fontWeights,
+  initialColorModeName: 'light',
   fonts: {
     body: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
@@ -38,7 +39,6 @@ const theme = {
     '5px solid',
     '6px solid',
   ],
-  colors,
   colorStyles: {
     primary: {
       color: colors.primary,
@@ -202,6 +202,6 @@ const theme = {
       borderColor: 'lightgray',
     },
   },
-}
+};
 
 export default theme;

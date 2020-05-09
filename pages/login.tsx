@@ -9,6 +9,10 @@ const Heading = styled.h1<ColorProps & FontSizeProps>`
   ${color};
 `;
 
+const Button = styled.button<ColorProps>`
+  ${color};
+`;
+
 const Main = styled.main<LayoutProps & ColorProps>`
   ${layout};
   ${color}
@@ -16,21 +20,21 @@ const Main = styled.main<LayoutProps & ColorProps>`
 
 interface Props {
   userAgent?: string;
-  userName: string
+  userName: string;
 }
 
 const LoginPage: NextPage<Props> = () => {
   const value = useContext(AppContext);
-  const { toggleMode, mode} = useContext(AppContext);
-  console.log(value)
+  const { toggleMode, mode } = useContext(AppContext);
+  console.log(value);
 
   return (
-    <Main minHeight={12} color='text' bg={['background']} >
+    <Main minHeight={12} color="text" bg={['background']} >
       <div>This is the login page</div>
-      <Heading fontSize={6} color='text' bg={['background']}>My Login Page</Heading>
-      <button onClick={toggleMode}>{mode}</button>
+      <Heading fontSize={6} color="text" bg={['background']}>My Login Page</Heading>
+      <Button onClick={toggleMode} bg={['background']} >{mode}</Button>
     </Main>
-  )
-}
+  );
+};
 
 export default LoginPage;

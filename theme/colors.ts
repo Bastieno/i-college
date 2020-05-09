@@ -6,7 +6,7 @@ const baseColors = {
   lightgray: '#fafafa',
   midgray: '#777',
   transparent: 'transparent',
-}
+};
 
 const colors = {
   ...baseColors,
@@ -38,7 +38,7 @@ const colors = {
       lightgray: '#111',
       highlight: '#001119',
     },
-  }
-}
+  },
+};
 
 export default colors;

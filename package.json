@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage=true",
-    "dev": "next",
-    "build": "next build",
+    "dev": "cross-env NODE_OPTIONS=\"-r esm\" next",
+    "build": "cross-env NODE_OPTIONS=\"-r esm\" next build",
     "start": "next start",
-    "tslint": "tslint -p . -c tslint.json"
+    "analyze": "cross-env-shell NODE_OPTIONS=\"-r esm\" ANALYZE=true next build",
+    "tslint": "tslint -p . -c tslint.json",
+    "lint:fix": "npm run tslint -- --fix"
   },
   "keywords": [],
   "author": "francis.nduamaka@gmail.com",
@@ -32,8 +34,17 @@
     "printWidth": 120
   },
   "dependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "@next/bundle-analyzer": "^9.3.6",
     "@styled-system/theme-get": "^5.1.2",
+    "antd": "^4.2.0",
+    "antd-dayjs-webpack-plugin": "^1.0.0",
+    "babel-plugin-import": "^1.13.0",
+    "cross-env": "^7.0.2",
+    "dayjs": "^1.8.26",
+    "esm": "^3.2.25",
     "next": "^9.3.6",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0",

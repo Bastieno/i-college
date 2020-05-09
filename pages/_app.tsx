@@ -1,24 +1,20 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/globalStyles';
-import theme from '../theme';
+import { getTheme } from '../utils';
 import AppContext from '../contexts/appContext';
-
-const getTheme = (mode:string) => ({
-  ...theme,
-  colors: theme.colors.modes[mode] || theme.colors
-});
-
-const modes: string[] = ['light', 'dark'];
+import 'antd/dist/antd.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const modes: string[] = ['light', 'dark'];
   const [mode, setMode] = useState(modes[0]);
   const theme = getTheme(mode);
+
   const toggleMode = () => {
     const i = (modes.indexOf(mode) + 1) % modes.length;
     setMode(modes[i]);
-  }
+  };
 
   return (
     <AppContext.Provider value={{ toggleMode, mode }}>
@@ -27,7 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </ThemeProvider>
     </AppContext.Provider>
-  )
-}
+  );
+};
 
 export default MyApp;

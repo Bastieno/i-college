@@ -1,5 +1,5 @@
-const App = () => (
-  <div>
+const App = ({ className }) => (
+  <div className={className} >
     Welcome to ICollege
   </div>
 );
