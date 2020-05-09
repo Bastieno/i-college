@@ -4,16 +4,73 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "test": "jest --coverage=true",
+    "dev": "cross-env NODE_OPTIONS=\"-r esm\" next",
+    "build": "cross-env NODE_OPTIONS=\"-r esm\" next build",
+    "start": "next start",
+    "analyze": "cross-env-shell NODE_OPTIONS=\"-r esm\" ANALYZE=true next build",
+    "tslint": "tslint -p . -c tslint.json",
+    "lint:fix": "npm run tslint -- --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "francis.nduamaka@gmail.com",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tslint"
+    }
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "prettier --write",
+      "git add",
+      "jest --findRelatedTests",
+      "tslint"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
   "dependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "@next/bundle-analyzer": "^9.3.6",
+    "@styled-system/theme-get": "^5.1.2",
+    "antd": "^4.2.0",
+    "antd-dayjs-webpack-plugin": "^1.0.0",
+    "babel-plugin-import": "^1.13.0",
+    "cross-env": "^7.0.2",
+    "dayjs": "^1.8.26",
+    "esm": "^3.2.25",
     "next": "^9.3.6",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.1.0",
+    "@types/styled-system": "^5.1.9",
+    "babel-jest": "^25.5.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "husky": "^4.2.5",
+    "jest": "^25.5.4",
+    "jest-watch-typeahead": "^0.5.0",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-react-hooks": "^2.2.2",
+    "typescript": "^3.8.3"
   }
 }

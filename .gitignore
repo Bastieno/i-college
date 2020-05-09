@@ -1,2 +1,22 @@
+# dependencies
 node_modules
+.docz
+out
+
+# nextjs build output
 .next
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# production
+/build
+
+# dotenv environment variables file
+.env
+
+# ignore test results folder
+test-results/
+
+# misc
+.vscode/
