@@ -11,7 +11,7 @@ const baseColors = {
 const colors = {
   ...baseColors,
   text: '#000',
-  background: '#f3f3f3',
+  background: '#F6F6F6',
   highlight: '#ededff',
   accent: '#c0f',
   headingColor: '#302b4e',

@@ -8,12 +8,18 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     background-color: ${themeGet('colors.background', '#fafafa')};
     font-family: ${themeGet('fonts.body', 'Roboto')};
     margin: ${themeGet('space.0', '0px')};
     padding: ${themeGet('space.0', '0px')};
     box-sizing: border-box;
+    height: 100%;
     overflow-x: hidden;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
