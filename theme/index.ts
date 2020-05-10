@@ -2,8 +2,8 @@ import colors from './colors';
 
 const breakpoints: string[] = ['576px', '768px', '991px', '1220px'];
 const space: string[] = ['0px', '4px', '8px', '16px', '32px', '64px', '128px', '256px', '512px'];
-const fontSizes: Number[] = [12, 14, 16, 18, 20, 24, 32, 48, 64, 72];
-const fontWeights: Number[] = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const fontSizes: number[] = [12, 14, 16, 18, 20, 24, 32, 48, 64, 72];
+const fontWeights: number[] = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 const sizes: any[] = [16, 32, 40, 44, 48, 64, 128, 256, 512, 768, 1024, 1536, '100vh'];
 const radii: any[] = [3, 4, 5, 10, 20, 30, 60, 120, '50%'];
 
@@ -17,7 +17,7 @@ const theme = {
   fontWeights,
   initialColorModeName: 'light',
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Open Sans, sans-serif',
     monospace: 'Menlo, monospace',
   },
   lineHeights: {

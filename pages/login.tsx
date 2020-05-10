@@ -1,39 +1,66 @@
-import { useContext } from 'react';
 import { NextPage } from 'next';
-import styled from 'styled-components';
-import { color, ColorProps, fontSize, FontSizeProps, layout, LayoutProps } from 'styled-system';
-import AppContext from '../contexts/appContext';
+// import styled from 'styled-components';
+import Box from '@components/Box';
+import LoginForm from '@components/Login-Form';
 
-const Heading = styled.h1<ColorProps & FontSizeProps>`
-  ${fontSize};
-  ${color};
-`;
-
-const Button = styled.button<ColorProps>`
-  ${color};
-`;
-
-const Main = styled.main<LayoutProps & ColorProps>`
-  ${layout};
-  ${color}
-`;
-
-interface Props {
-  userAgent?: string;
-  userName: string;
-}
-
-const LoginPage: NextPage<Props> = () => {
-  const value = useContext(AppContext);
-  const { toggleMode, mode } = useContext(AppContext);
-  console.log(value);
-
+const LoginPage: NextPage = () => {
   return (
-    <Main minHeight={12} color="text" bg={['background']} >
-      <div>This is the login page</div>
-      <Heading fontSize={6} color="text" bg={['background']}>My Login Page</Heading>
-      <Button onClick={toggleMode} bg={['background']} >{mode}</Button>
-    </Main>
+    <Box minHeight={'100vh'} position="relative">
+      <div style={{ paddingBottom: '64px' }} >
+        <Box height={'100px'} bg={'white'} display="flex" alignItems="center">
+          <a style={{
+            display: 'inline-block',
+            width: '100px',
+            fontWeight: 700,
+            textAlign: 'center',
+            padding: '8px',
+            backgroundColor: '#000',
+            color: '#fff',
+            marginLeft: '32px',
+          }}>
+            iCOLLEGE
+          </a>
+        </Box>
+        <Box my={'70px'} minHeight={0} flex="auto">
+          <h2
+            style={{ fontSize: '25px', fontWeight: 700 }}
+            className="text-center mb-4"
+          >
+            Login to your Account
+          </h2>
+          <Box
+            width={['80%', '400px', '400px', '400px']}
+            height={'500px'}
+            mx={'auto'}
+            bg={'white'}
+          >
+            <LoginForm />
+          </Box>
+        </Box>
+      </div>
+      <Box
+        height={'64px'}
+        bg={'black'}
+        width={'100%'}
+        position="absolute"
+        bottom="0"
+        display="flex"
+        flex="0 0 auto"
+        alignItems="center"
+      >
+        <a style={{
+          display: 'block',
+          fontWeight: 700,
+          textAlign: 'center',
+          padding: '8px',
+          backgroundColor: '#000',
+          color: '#fff',
+          marginLeft: '32px',
+        }}>
+          Copyright @ iCOLLEGE 2020
+        </a>
+      </Box>
+    </Box>
   );
 };
 
