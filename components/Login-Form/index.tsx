@@ -1,5 +1,6 @@
 import { Form, Input, Button, Checkbox } from 'antd';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const StyledForm = styled(Form)`
   padding: 32px;
@@ -60,9 +61,9 @@ const LoginForm = () => {
       <Form.Item>
         <Button type="primary" htmlType="submit" className="login-form-button" ghost>
           Login
-              </Button>
+        </Button>
       </Form.Item>
-      <p>If you have not registered, <a>Click here to Register</a></p>
+      <p>If you have not registered, <Link href="/register"><a>Click here to Register</a></Link></p>
     </StyledForm>
   );
 };
