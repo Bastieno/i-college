@@ -59,7 +59,6 @@ const StyledContainer = styled.div`
   }
 
   .ant-layout-content {
-    background: rgba(16, 142, 233, 1);
     color: #fff;
     min-height: 120px;
   }
@@ -67,7 +66,7 @@ const StyledContainer = styled.div`
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const AdminLayout = () => {
+const AdminLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   const marginLeft = collapsed ? '80px' : '200px';
 
@@ -142,51 +141,11 @@ const AdminLayout = () => {
             </Menu.Item>
             </Menu>
           </Sider>
-          <Layout className="site-layout">
+          <Layout className="site-layout" style={{ background: '#f6f6f6' }}>
             <div style={{ marginLeft }}>
-              <Content style={{ overflow: 'initial', background: 'grey', paddingBottom: '100px', paddingTop: '110px' }}>
-                <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>
-                  <h1>Hello Francis</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam facilis minima possimus aspernatur perferendis velit, illum vero at vitae non.
-                  </p>
-
+              <Content style={{ overflow: 'initial', paddingBottom: '100px', paddingTop: '110px' }}>
+                <div className="site-layout-background" style={{ padding: 24 }}>
+                  {children}
                 </div>
               </Content>
             </div>

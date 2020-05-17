@@ -1,5 +1,9 @@
 import AdminLayout from '@components/Layout/AdminLayout';
 
 export default () => (
-  <AdminLayout />
+  <AdminLayout>
+    <>
+      <p>Hello. This is the Admin DashBoard</p>
+    </>
+  </AdminLayout>
 );
