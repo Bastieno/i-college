@@ -12,7 +12,7 @@ import {
   Col,
   Row,
   Empty,
-  Modal
+  Modal,
 } from 'antd';
 import {
   PlusSquareOutlined,
@@ -22,7 +22,7 @@ import {
   PlusOutlined,
   CloseCircleTwoTone,
   PlusSquareTwoTone,
-  InfoCircleOutlined
+  InfoCircleOutlined,
 } from '@ant-design/icons';
 import Box from '@components/Box';
 
@@ -58,7 +58,7 @@ const ManageCategoryEmptyView = ({ addItem }) => (
       }}
       description={
         <span style={{ width: '35%', textAlign:'center', display:'block', margin: '8px auto 28px' }}>
-          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor='#2471A3' /> Add Now</a>
+          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now</a>
           <span>
             No User Categories has been created yet. Click on the <strong>Add Icon</strong> tab above to create a User Category
           </span>
@@ -78,7 +78,7 @@ const ManageRoleEmptyView = ({ addItem }) => (
       }}
       description={
         <span style={{ width: '35%', textAlign:'center', display:'block', margin: '8px auto 28px' }}>
-          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor='#2471A3' /> Add Now</a>
+          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now</a>
           <span>
             No Role has been created yet. Click on the <strong>Add Icon</strong> tab above to create a Role
           </span>
@@ -91,7 +91,7 @@ const ManageRoleEmptyView = ({ addItem }) => (
 
 const ManageCategoryNonEmptyView = () => (
   <Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFAFA' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFAFA" p={3}>
       <span>Student</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -99,7 +99,7 @@ const ManageCategoryNonEmptyView = () => (
         <a><DeleteTwoTone twoToneColor="#EB5757" /></a>
       </Space>
     </Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFFFF' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFFFF" p={3}>
       <span>Academic Staff</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -107,7 +107,7 @@ const ManageCategoryNonEmptyView = () => (
         <a><DeleteTwoTone twoToneColor="#EB5757" /></a>
       </Space>
     </Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFAFA' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFAFA" p={3}>
       <span>Non-Academic Staff</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -120,7 +120,7 @@ const ManageCategoryNonEmptyView = () => (
 
 const ManageRoleNonEmptyView = ({ showEditModal, showDeleteModal }) => (
   <Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFAFA' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFAFA" p={3}>
       <span>Admin</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -128,7 +128,7 @@ const ManageRoleNonEmptyView = ({ showEditModal, showDeleteModal }) => (
         <a onClick={showDeleteModal}><DeleteTwoTone twoToneColor="#EB5757" /></a>
       </Space>
     </Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFFFF' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFFFF" p={3}>
       <span>Result Inputer</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -136,7 +136,7 @@ const ManageRoleNonEmptyView = ({ showEditModal, showDeleteModal }) => (
         <a onClick={showDeleteModal}><DeleteTwoTone twoToneColor="#EB5757" /></a>
       </Space>
     </Box>
-    <Box display='flex' justifyContent='space-between' height={4} bg='#FFFAFA' p={3}>
+    <Box display="flex" justifyContent="space-between" height={4} bg="#FFFAFA" p={3}>
       <span>Result Authorizer</span>
       <Space size="middle">
         <a><InfoCircleOutlined /></a>
@@ -148,11 +148,11 @@ const ManageRoleNonEmptyView = ({ showEditModal, showDeleteModal }) => (
 );
 
 const AddRoleNonEmptyView = () => {
-  const onChange = (checkedValues) => console.log('checked = ', checkedValues);
+  const onChange = checkedValues => console.log('checked = ', checkedValues);
   return (
     <Box>
       <div>
-        <Form layout='vertical'>
+        <Form layout="vertical">
           <Form.Item label="Role Name">
             <Input size="large" placeholder="Admin" />
           </Form.Item>
@@ -298,8 +298,8 @@ const AddRoleNonEmptyView = () => {
         </Form>
       </div>
     </Box>
-  )
-}
+  );
+};
 
 const dataSource = [
   {
@@ -483,8 +483,8 @@ const GradeFieldSet = () => {
   );
 };
 
-const ManageRoleEditModal = ({visible, handleOk, handleCancel, loading}) => {
-  const onChange = (checkedValues) => console.log('checkedValues :>> ', checkedValues);
+const ManageRoleEditModal = ({ visible, handleOk, handleCancel, loading }) => {
+  const onChange = checkedValues => console.log('checkedValues :>> ', checkedValues);
   return (
     <Modal
       style={{ top: 50 }}
@@ -500,7 +500,7 @@ const ManageRoleEditModal = ({visible, handleOk, handleCancel, loading}) => {
       ]}
     >
       <div>
-        <Form layout='vertical'>
+        <Form layout="vertical">
           <Form.Item label="Role Name">
             <Input size="large" placeholder="Admin" />
           </Form.Item>
@@ -642,10 +642,10 @@ const ManageRoleEditModal = ({visible, handleOk, handleCancel, loading}) => {
         </Form>
       </div>
     </Modal>
-  )
-}
+  );
+};
 
-const ManageRoleDeleteModal = ({visible, handleOk, handleCancel, loading}) => {
+const ManageRoleDeleteModal = ({ visible, handleOk, handleCancel, loading }) => {
   return (
     <Modal
       visible={visible}
@@ -662,12 +662,12 @@ const ManageRoleDeleteModal = ({visible, handleOk, handleCancel, loading}) => {
       ]}
     >
       <div>
-        <h3 style={{fontWeight:'bold', margin:'8px auto 16px'}}>Are you sure you want to remove this Item?</h3>
+        <h3 style={{ fontWeight:'bold', margin:'8px auto 16px' }}>Are you sure you want to remove this Item?</h3>
         <p>If you remove this Item, there is a risk that you might loose every information related to it.</p>
       </div>
     </Modal>
-  )
-}
+  );
+};
 
 export const RolesSetting = () => {
   const [showModal, setShowModal] = useState(false);
@@ -675,7 +675,7 @@ export const RolesSetting = () => {
   const [loading, setLoading] = useState(false);
 
   const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0)
+  const [count2, setCount2] = useState(0);
 
   const showEditModal = () => {
     setShowModal(true);
@@ -690,7 +690,7 @@ export const RolesSetting = () => {
   };
 
   const handleCancel = () => {
-    setShowModal(false)
+    setShowModal(false);
   };
 
   const handleShowDeleteModal = () => {
@@ -706,25 +706,25 @@ export const RolesSetting = () => {
   };
 
   const handleDeleteModalCancel = () => {
-    setShowDeleteModal(false)
+    setShowDeleteModal(false);
   };
 
   const handleAddClickForCategories = () => {
     setCount1(prevState => prevState + 1);
-  }
+  };
 
   const handleAddClickForRoles = () => {
     setCount2(prevState => prevState + 1);
-  }
+  };
 
   return (
     <>
       <ManageRoleEditModal visible={showModal} handleOk={handleOk} handleCancel={handleCancel} loading={loading} />
       <ManageRoleDeleteModal visible={showDeleteModal} handleOk={handleDeleteModalOk} handleCancel={handleDeleteModalCancel} loading={loading} />
-      <Box mb={5}>
+      <Box mb={4}>
         <h3 style={{
           border: '1px solid #DDDDDD',
-          padding: '8px'
+          padding: '8px',
         }}>
           Roles, Permissions and User Categories
         </h3>
@@ -765,17 +765,17 @@ export const RolesSetting = () => {
 
 export const StudentRegSetting = () => {
   return (
-    <Box mb={5}>
+    <Box mb={4}>
       <h3 style={{
         border: '1px solid #DDDDDD',
-        padding: '8px'
+        padding: '8px',
       }}>Students and Registration</h3>
       <Collapse accordion>
         <Panel header="Generate QR Code for the registration of students" key="1">
           <p>{text}</p>
         </Panel>
         <Panel header="What information should be compulsory for student registration?" key="2">
-          <div>
+          <Box mt={3} mb={1}>
             <p style={{ marginBottom: '20px' }}>
               <Checkbox
               >
@@ -789,7 +789,7 @@ export const StudentRegSetting = () => {
               </Checkbox>
             </p>
             <Divider />
-            <p>
+            <div>
               <Button
                 type="primary"
                 size="small"
@@ -797,8 +797,8 @@ export const StudentRegSetting = () => {
               >
                 Save
               </Button>
-            </p>
-          </div>
+            </div>
+          </Box>
         </Panel>
       </Collapse>
     </Box>
@@ -809,10 +809,10 @@ export const ResultsGradesSetting = () => {
   const callback = key => console.log(key);
 
   return (
-    <Box mb={5}>
+    <Box mb={4}>
       <h3 style={{
         border: '1px solid #DDDDDD',
-        padding: '8px'
+        padding: '8px',
       }}>Results and Grades</h3>
       <Collapse accordion>
         <Panel header="Define the various types of academic assesments" key="1">
