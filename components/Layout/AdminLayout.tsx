@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Badge, Avatar, Space } from 'antd';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import {
@@ -11,6 +11,9 @@ import {
   AppstoreOutlined,
   IdcardOutlined,
   BookOutlined,
+  BellOutlined,
+  MessageFilled,
+  UserOutlined,
 } from '@ant-design/icons';
 import Box from '@components/Box';
 
@@ -54,7 +57,7 @@ const StyledContainer = styled.div`
     color: #2471A3;
     font-size: 18px;
     line-height: 64px;
-    padding: 0 24px;
+    padding-right: 24px;
     cursor: pointer;
     transition: color 0.3s;
   }
@@ -104,9 +107,16 @@ const AdminLayout = ({ children }) => {
     <StyledContainer>
       <Layout style={{ minHeight: '100vh' }}>
         <div style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-          <Box style={{ background: '#ffffff', padding: 0, height: '75px', display: 'flex', alignItems: 'center' }}>
+          <Box
+            bg="#ffffff"
+            padding="24px"
+            height="75px"
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+          >
             <div>
-              <Box ml={[1, 2]}>
+              <Box>
                 <Link href="/">
                   <a style={{
                     display: 'inline-block',
@@ -116,39 +126,20 @@ const AdminLayout = ({ children }) => {
                     padding: '8px',
                     backgroundColor: '#000',
                     color: '#fff',
-                    marginLeft: '32px',
                   }}>
                     iCOLLEGE
                   </a>
                 </Link>
               </Box>
-                {/* <Link href="/">
-                  <a style={{
-                    display: 'inline-block',
-                    width: '100px',
-                    fontWeight: 700,
-                    textAlign: 'center',
-                    // padding: '8px',
-                    backgroundColor: '#000',
-                    color: '#fff',
-                    marginLeft: '32px',
-                  }}>
-                    iCOLLEGE
-                  </a>
-                </Link> */}
-              {/* <div className="header-logo">
-                icollege
-                <Link href="/">
-                  <a style={{
-                    color: 'blue',
-                  }}>
-                    iCOLLEGE
-                  </a>
-                </Link>
-              </div> */}
+            </div>
+            <div>
+              <Space size="middle">
+                <Avatar size="large" icon={<UserOutlined />} />
+                <span style={{ color: '#626567' }}>Tumbare</span>
+              </Space>
             </div>
           </Box>
-          <Box display="flex" alignItems="center" style={{ background: '#f6f6f6', height: '65px', padding: 0, borderBottom: '1px solid #e3e3e3' }}>
+          <Box display="flex" justifyContent="space-between" alignItems="center" style={{ background: '#f6f6f6', height: '65px', padding: '8px 24px', borderTop: '1px solid #e3e3e3' }}>
             <div>
               <span>
                 {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
@@ -158,6 +149,25 @@ const AdminLayout = ({ children }) => {
               </span>
               <span style={{ color: '#2471A3', fontSize: '18px', lineHeight: '20px', fontWeight: 600 }}>University of Port Harcourt</span>
             </div>
+            <Space size={48} style={{ paddingRight: 8 }}>
+              <Badge style={{
+                height: '16px',
+                minWidth: '16px',
+                lineHeight: '16px',
+                fontSize: '10px',
+              }} count={4}>
+                <MessageFilled style={{ fontSize: 20 }} />
+              </Badge>
+              <Badge style={{
+                backgroundColor: '#52c41a',
+                height: '16px',
+                minWidth: '16px',
+                lineHeight: '16px',
+                fontSize: '10px',
+              }} count={5}>
+                <BellOutlined style={{ fontSize: 20 }} />
+              </Badge>
+            </Space>
           </Box>
         </div>
         <Layout>
@@ -193,12 +203,11 @@ const AdminLayout = ({ children }) => {
           <Layout className="site-layout" style={{ background: '#f6f6f6' }}>
             <div style={{ marginLeft }}>
               <Content style={{ overflow: 'initial', paddingBottom: '64px', paddingTop: '140px' }}>
-                <div className="site-layout-background" style={{ padding: 24 }}>
+                <div className="site-layout-background" style={{ padding: '0 24px 24px' }}>
                   {children}
                 </div>
               </Content>
             </div>
-            {/* <Footer style={{ background: 'orange' }} /> */}
             <Box
               height={'64px'}
               bg={'black'}
