@@ -57,10 +57,27 @@ const ManageCategoryEmptyView = ({ addItem }) => (
         height: 80,
       }}
       description={
-        <span style={{ width: '35%', textAlign:'center', display:'block', margin: '8px auto 28px' }}>
-          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now</a>
+        <span
+          style={{
+            width: '35%',
+            textAlign:'center',
+            display:'block',
+            margin: '8px auto 28px',
+          }}
+        >
+          <a
+            onClick={addItem}
+            style={{
+              display:'block',
+              margin:'16px auto',
+            }}
+          >
+            <PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now
+          </a>
           <span>
-            No User Categories has been created yet. Click on the <strong>Add Icon</strong> tab above to create a User Category
+            No User Categories has been created yet.
+            Click on the <strong>Add Icon</strong>
+            tab above to create a User Category
           </span>
         </span>
       }
@@ -77,10 +94,24 @@ const ManageRoleEmptyView = ({ addItem }) => (
         height: 80,
       }}
       description={
-        <span style={{ width: '35%', textAlign:'center', display:'block', margin: '8px auto 28px' }}>
-          <a onClick={addItem} style={{ display:'block', margin:'16px auto' }}><PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now</a>
+        <span
+          style={{
+            width: '35%',
+            textAlign:'center',
+            display:'block',
+            margin: '8px auto 28px',
+          }}
+        >
+          <a
+            onClick={addItem}
+            style={{ display:'block', margin:'16px auto' }}
+          >
+            <PlusSquareTwoTone twoToneColor="#2471A3" /> Add Now
+          </a>
           <span>
-            No Role has been created yet. Click on the <strong>Add Icon</strong> tab above to create a Role
+            No Role has been created yet.
+            Click on the <strong>Add Icon</strong>
+            tab above to create a Role
           </span>
         </span>
       }
@@ -662,8 +693,18 @@ const ManageRoleDeleteModal = ({ visible, handleOk, handleCancel, loading }) => 
       ]}
     >
       <div>
-        <h3 style={{ fontWeight:'bold', margin:'8px auto 16px' }}>Are you sure you want to remove this Item?</h3>
-        <p>If you remove this Item, there is a risk that you might loose every information related to it.</p>
+        <h3
+          style={{
+            fontWeight:'bold',
+            margin:'8px auto 16px',
+          }}
+        >
+          Are you sure you want to remove this item?
+        </h3>
+        <p>
+          If you remove this item,
+          there is a risk that you might loose every information related to it.
+        </p>
       </div>
     </Modal>
   );
@@ -719,8 +760,18 @@ export const RolesSetting = () => {
 
   return (
     <>
-      <ManageRoleEditModal visible={showModal} handleOk={handleOk} handleCancel={handleCancel} loading={loading} />
-      <ManageRoleDeleteModal visible={showDeleteModal} handleOk={handleDeleteModalOk} handleCancel={handleDeleteModalCancel} loading={loading} />
+      <ManageRoleEditModal
+        visible={showModal}
+        handleOk={handleOk}
+        handleCancel={handleCancel}
+        loading={loading}
+      />
+      <ManageRoleDeleteModal
+        visible={showDeleteModal}
+        handleOk={handleDeleteModalOk}
+        handleCancel={handleDeleteModalCancel}
+        loading={loading}
+      />
       <Box mb={4}>
         <h3 style={{
           border: '1px solid #DDDDDD',
@@ -748,7 +799,10 @@ export const RolesSetting = () => {
               count2 === 0 ? <ManageRoleEmptyView addItem={handleAddClickForRoles} /> : (
                 <Tabs type="card">
                   <TabPane tab={tab1} key="1">
-                    <ManageRoleNonEmptyView showEditModal={showEditModal} showDeleteModal={handleShowDeleteModal} />
+                    <ManageRoleNonEmptyView
+                      showEditModal={showEditModal}
+                      showDeleteModal={handleShowDeleteModal}
+                    />
                   </TabPane>
                   <TabPane tab={tab2} key="2">
                     <AddRoleNonEmptyView />
@@ -779,13 +833,15 @@ export const StudentRegSetting = () => {
             <p style={{ marginBottom: '20px' }}>
               <Checkbox
               >
-                I want the student’s <strong>Phone Number</strong> to be compulsory when a student is registering
+                I want the student’s <strong>Phone Number</strong>
+                to be compulsory when a student is registering
               </Checkbox>
             </p>
             <p style={{ marginBottom: '20px' }}>
               <Checkbox
               >
-                I want the student’s <strong>Email Address</strong> to be compulsory when a student is registering
+                I want the student’s<strong>Email Address</strong>
+                to be compulsory when a student is registering
               </Checkbox>
             </p>
             <Divider />
