@@ -432,7 +432,7 @@ const CollegeSection = () => {
   return (
     <Tabs tabBarExtraContent={operations} onChange={callback} type="card">
       <TabPane tab={tab1} key="1">
-        <Table dataSource={CollegeDataSource} columns={CollegeColumns} />;
+        <Table dataSource={CollegeDataSource} columns={CollegeColumns} />
       </TabPane>
       <TabPane tab={tab2} key="2">
         <EditableTagGroup tagCategory="College" />
@@ -497,7 +497,7 @@ const FacultySection = () => {
   return (
     <Tabs tabBarExtraContent={operations} onChange={callback} type="card">
       <TabPane tab={tab1} key="1">
-        <Table dataSource={FacultyDataSource} columns={FacultyColumns} />;
+        <Table dataSource={FacultyDataSource} columns={FacultyColumns} />
       </TabPane>
       <TabPane tab={tab2} key="2">
         <EditableTagGroup tagCategory="Faculty" />
@@ -725,7 +725,7 @@ const DepartmentSection = () => {
         type="card"
       >
         <TabPane tab={tab1} key="1">
-          <Table dataSource={DepartmentDataSource} columns={DepartmentColumns} />;
+          <Table dataSource={DepartmentDataSource} columns={DepartmentColumns} />
         </TabPane>
         <TabPane tab={tab2} key="2">
           <EditableTagGroup tagCategory="Department" />
