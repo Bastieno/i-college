@@ -139,7 +139,17 @@ const AdminLayout = ({ children }) => {
               </Space>
             </div>
           </Box>
-          <Box display="flex" justifyContent="space-between" alignItems="center" style={{ background: '#f6f6f6', height: '65px', padding: '8px 24px', borderTop: '1px solid #e3e3e3' }}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            style={{
+              background: '#f6f6f6',
+              height: '65px',
+              padding: '8px 24px',
+              borderTop: '1px solid #e3e3e3',
+            }}
+          >
             <div>
               <span>
                 {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
@@ -147,7 +157,16 @@ const AdminLayout = ({ children }) => {
                   onClick: toggle,
                 })}
               </span>
-              <span style={{ color: '#2471A3', fontSize: '18px', lineHeight: '20px', fontWeight: 600 }}>University of Port Harcourt</span>
+              <span
+                style={{
+                  color: '#2471A3',
+                  fontSize: '18px',
+                  lineHeight: '20px',
+                  fontWeight: 600,
+                }}
+              >
+                University of Port Harcourt
+              </span>
             </div>
             <Space size={48} style={{ paddingRight: 8 }}>
               <Badge style={{
@@ -182,7 +201,11 @@ const AdminLayout = ({ children }) => {
             }}
           >
             {/* <div className="logo" /> */}
-            <Menu style={{ background: '#e2e2e2' }} theme="light" mode="inline" defaultSelectedKeys={['1']}>
+            <Menu
+              style={{ background: '#e2e2e2' }}
+              theme="light" mode="inline"
+              defaultSelectedKeys={['1']}
+            >
               <Menu.Item key="1" icon={<AppstoreOutlined />}>
                 Dashboard
               </Menu.Item>
