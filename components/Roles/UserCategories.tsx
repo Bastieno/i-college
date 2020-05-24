@@ -877,7 +877,7 @@ export const ResultsGradesSetting = () => {
         <Panel header="Define the various types of grades and their score ranges" key="2">
           <Tabs onChange={callback} type="card">
             <TabPane tab={tab1} key="1">
-              <Table dataSource={dataSource} columns={columns} />;
+              <Table dataSource={dataSource} columns={columns} />
             </TabPane>
             <TabPane tab={tab2} key="2">
               <GradeFieldSet />
