@@ -1,12 +1,10 @@
 import { NextPage } from 'next';
-import Link from 'next/link';
-// import styled from 'styled-components';
 import Box from '@components/Box';
 import LoginForm from '@components/Login-Form';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
-const HomePage: NextPage = () => {
+const LoginPage: NextPage = () => {
   return (
     <Box minHeight={'100vh'} position="relative">
       <Box pb={5} >
@@ -33,4 +31,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default LoginPage;

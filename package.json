@@ -43,6 +43,7 @@
     "cross-env": "^7.0.2",
     "dayjs": "^1.8.26",
     "esm": "^3.2.25",
+    "evergreen-ui": "^4.27.4",
     "next": "^9.3.6",
     "postcss-preset-env": "^6.7.0",
     "rc-tween-one": "^2.6.8",
