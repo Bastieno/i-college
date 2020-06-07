@@ -210,7 +210,7 @@ const AdminLayout = ({ children }) => {
                 Dashboard
               </Menu.Item>
               <Menu.Item key="2" icon={<IdcardOutlined />}>
-                Members
+                Users
               </Menu.Item>
               <Menu.Item key="3" icon={<BankOutlined />}>
                 Department
