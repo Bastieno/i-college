@@ -1,4 +1,4 @@
-import AdminLayout from '@components/Layout/AdminLayout';
+import AdminLayout from '@components/layout/admin';
 import { RolesSetting, StudentRegSetting, ResultsGradesSetting }from '@components/Roles/UserCategories';
 
 export default () => (

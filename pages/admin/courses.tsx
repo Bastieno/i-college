@@ -1,4 +1,4 @@
-import AdminLayout from '@components/Layout/AdminLayout';
+import AdminLayout from '@components/layout/admin';
 import CourseView from '@components/views/admin/courses';
 
 export default () => (
