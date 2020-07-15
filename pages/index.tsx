@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 import styled from 'styled-components';
 // import Link from 'next/link';
-import Box from '@components/Box';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import HomePageLeftContent from '@containers/HomePage/LeftContent';
-import HomePageRightContent from '@containers/HomePage/RightContent';
+import Box from '@components/common/box';
+import Header from '@components/common/header';
+import Footer from '@components/common/footer';
+import HomePageLeftContent from '@components/views/home/leftContent';
+import HomePageRightContent from '@components/views/home/rightContent';
 
 const StyledContent = styled.div`
   display: grid;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Collapse, Table, Typography } from 'antd';
-import Box from '@components/Box';
+import Box from '@components/common/box';
 
 const { Panel } = Collapse;
 const { Text } = Typography;
@@ -188,6 +188,94 @@ const ResultView = () => {
   );
 };
 
+const PathologyResultDataSource = [
+  {
+    key: '1',
+    courseCode: 'PTH 101',
+    courseName: 'Introduction to Pathology',
+    unit: '3',
+    writtenPapers: '24',
+    praticals: '55',
+    orals: '55',
+    totalScore: '79',
+    grade: 'A',
+  },
+];
+
+const PharmacologyResultDataSource = [
+  {
+    key: '1',
+    courseCode: 'PHM 101',
+    courseName: 'Introduction to Pharmacology',
+    unit: '3',
+    writtenPapers: '24',
+    praticals: '55',
+    orals: '55',
+    totalScore: '79',
+    grade: 'A',
+  },
+];
+
+const SpecialResultView = ({ dataSource }) => {
+  const ResultColumns = [
+    {
+      title: 'Course Code',
+      dataIndex: 'courseCode',
+      key: 'courseCode',
+    },
+    {
+      title: 'Course Name',
+      dataIndex: 'courseName',
+      key: 'courseName',
+      render: (text: string) => <span style={{ color: '#1890FF' }}>{text}</span>,
+    },
+    {
+      title: 'Unit',
+      dataIndex: 'unit',
+      key: 'unit',
+    },
+    {
+      title: 'Written Papers',
+      dataIndex: 'writtenPapers',
+      key: 'writtenPapers',
+    },
+    {
+      title: 'Praticals',
+      dataIndex: 'praticals',
+      key: 'praticals',
+    },
+    { title: 'Orals',
+      dataIndex: 'orals',
+      key: 'orals',
+    },
+    {
+      title: 'Total',
+      dataIndex: 'totalScore',
+      key: 'totalScore',
+      render: (text: string) => <span style={{ fontWeight: 600 }}>{text}</span>,
+    },
+    {
+      title: 'Grade',
+      dataIndex: 'grade',
+      key: 'grade',
+      render: (text, record) => (
+        <span style={{ color: gradeColorMap[record.grade], fontWeight: 700 }}>{text}</span>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <Table
+        dataSource={dataSource}
+        columns={ResultColumns}
+        pagination={false}
+        bordered
+      />
+    </>
+  );
+};
+
 export default () => {
   const Header = ({ leftText, rightText }) => (
     <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -216,7 +304,17 @@ export default () => {
           <ResultView />
         </Panel>
         <Panel header={<Header leftText="2018/2019 Academic Year, Second Semester" rightText="GPA 3.45" />} key="2">
-          <p>Hello there</p>
+          <Collapse>
+            <Panel header="Pathology" key="1">
+              <SpecialResultView dataSource={PathologyResultDataSource} />
+            </Panel>
+            <Panel header="Pharmcology" key="2">
+              <SpecialResultView dataSource={PharmacologyResultDataSource} />
+            </Panel>
+            <Panel header="Total" key="3">
+              <p>Result Total</p>
+            </Panel>
+          </Collapse>
         </Panel>
         <Panel header={<Header leftText="2018/2019 Academic Year, First Semester" rightText="GPA 3.45" />} key="3">
           <p>Hello there</p>

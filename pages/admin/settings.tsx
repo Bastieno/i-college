@@ -1,10 +1,12 @@
-import AdminLayout from '@components/Layout/AdminLayout';
-import { RolesSetting, StudentRegSetting, ResultsGradesSetting }from '@components/Roles/UserCategories';
+import Layout from '@components/layout';
+import RolesSetting from '@components/views/admin/settings/rolesSetting';
+import StudentRegSetting from '@components/views/admin/settings/studentRegSetting';
+import ResultGradesSetting from '@components/views/admin/settings/resultGradeSetting';
 
 export default () => (
-  <AdminLayout>
+  <Layout role="admin">
     <RolesSetting />
     <StudentRegSetting />
-    <ResultsGradesSetting />
-  </AdminLayout>
+    <ResultGradesSetting />
+  </Layout>
 );

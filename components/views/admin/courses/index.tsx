@@ -18,8 +18,8 @@ import {
   DeleteTwoTone,
   InfoCircleOutlined,
 } from '@ant-design/icons';
-import Box from '@components/Box';
-import EditableTagGroup from '@components/EditableTagGroup';
+import Box from '@components/common/box';
+import EditableTagGroup from '@components/common/editableTagGroup';
 
 const { Panel } = Collapse;
 const { TabPane } = Tabs;
