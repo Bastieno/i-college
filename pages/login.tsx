@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import Box from '@components/Box';
-import LoginForm from '@components/Login-Form';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Box from '@components/common/box';
+import LoginForm from '@components/views/login/loginForm';
+import Header from '@components/common/header';
+import Footer from '@components/common/footer';
 
 const LoginPage: NextPage = () => {
   return (

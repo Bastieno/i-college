@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Collapse, Table, Typography } from 'antd';
-import Box from '@components/Box';
+import Box from '@components/common/box';
 
 const { Panel } = Collapse;
 const { Text } = Typography;

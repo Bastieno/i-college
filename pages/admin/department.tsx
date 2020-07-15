@@ -1,8 +1,8 @@
-import AdminLayout from '@components/layout/admin';
+import Layout from '@components/layout';
 import DepartmentView from '@components/views/admin/department';
 
 export default () => (
-  <AdminLayout>
+  <Layout role="admin">
     <DepartmentView />
-  </AdminLayout>
+  </Layout>
 );

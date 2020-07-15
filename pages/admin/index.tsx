@@ -1,11 +1,11 @@
 import { Collapse } from 'antd';
-import AdminLayout from '@components/layout/admin';
-import Box from '@components/Box';
+import Layout from '@components/layout';
+import Box from '@components/common/box';
 
 const { Panel } = Collapse;
 
 export default () => (
-  <AdminLayout>
+  <Layout role="admin">
     <Box mb={4}>
       <h3 style={{
         border: '1px solid #DDDDDD',
@@ -23,5 +23,5 @@ export default () => (
         </Panel>
       </Collapse>
     </Box>
-  </AdminLayout>
+  </Layout>
 );

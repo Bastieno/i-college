@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import Box from '@components/Box';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import RegistrationPageContent from '@containers/RegistrationPage';
+import Box from '@components/common/box';
+import Header from '@components/common/header';
+import Footer from '@components/common/footer';
+import RegistrationPageContent from '@components/views/registration';
 
 const RegistrationPage: NextPage = () => {
   return (
