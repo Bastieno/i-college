@@ -26,11 +26,11 @@ export const getStudentSelectedMenuItem = (pathname: string) => {
   switch (pathname) {
     case '/student':
       return ['1'];
-    case '/student/result':
+    case '/student/results':
       return ['2'];
     case '/student/courses':
       return ['3'];
-    case '/student/setting':
+    case '/student/settings':
       return ['4'];
     default:
       break;
